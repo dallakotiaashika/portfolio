@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Bootstrap | Aashika Dallakoti</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo" src="profile.jpg" alt="Aashika">
+    <span class="nav-name">Aashika Dallakoti</span>
+  </a>
+  <div class="nav-menu">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="fullstack.html">Full Stack</a>
+    <a class="nav-link" href="html.html">HTML</a>
+    <a class="nav-link" href="css.html">CSS</a>
+    <a class="nav-link" href="bootstrap.html">Bootstrap</a>
+    <a class="nav-link" href="javascript.html">JavaScript</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <div class="reveals">
+    <span class="label">Section 4 of 5 | Aashika Dallakoti</span>
+    <h1 class="page-title">Bootstrap | How I Build<br><em>Responsive Layouts Fast</em></h1>
+    <p class="page-intro">Bootstrap is the CSS framework I use on almost every project. It gives me a <strong>mobile-first responsive grid, pre-built components and utility classes</strong> out of the box so I can build polished, professional interfaces much faster than writing everything from scratch.</p>
+  </div>
+
+  <div class="grid-3 reveals" style="margin-bottom:44px;">
+    <div class="card card-body card-accent-rose bs-why">
+      <div class="bs-why-icon">&#9889;</div><h3>I Build Faster</h3>
+      <p>Bootstrap&rsquo;s ready-made navbars, cards and modals let me focus on features rather than reinventing basic components.</p>
+    </div>
+    <div class="card card-body card-accent-mint bs-why">
+      <div class="bs-why-icon">&#128241;</div><h3>Mobile-First Always</h3>
+      <p>Built mobile-first by default. My layouts automatically stack and reflow correctly on every screen size.</p>
+    </div>
+    <div class="card card-body card-accent-butter bs-why">
+      <div class="bs-why-icon">&#127775;</div><h3>Design Consistency</h3>
+      <p>Consistent spacing, colours and typography across every project I build with Bootstrap.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reveals" style="margin-bottom:44px;">
+    <h2 class="section-heading">The 12-Column <em>Grid I Use Every Day</em></h2>
+    <p class="section-sub">Bootstrap divides rows into 12 columns. I use breakpoints (sm/md/lg/xl) to control how columns stack on different screen sizes.</p>
+    <div class="code-block" style="margin-bottom:20px;padding-top:32px;">
+<span class="c">&lt;!-- Link Bootstrap CDN in &lt;head&gt; --&gt;</span>
+<span class="t">&lt;link</span> <span class="a">href</span>=<span class="v">"https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css"</span> <span class="a">rel</span>=<span class="v">"stylesheet"</span><span class="t">&gt;</span>
+
+<span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"container"</span><span class="t">&gt;</span>
+  <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"row g-3"</span><span class="t">&gt;</span>
+    <span class="c">&lt;!-- Full width on mobile, 1/3 on desktop --&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"col-12 col-md-4"</span><span class="t">&gt;</span>Card 1<span class="t">&lt;/div&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"col-12 col-md-4"</span><span class="t">&gt;</span>Card 2<span class="t">&lt;/div&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"col-12 col-md-4"</span><span class="t">&gt;</span>Card 3<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;/div&gt;</span>
+    </div>
+    <div class="bs-grid-demo">
+      <div class="bs-row"><div class="bs-col" style="background:#eeddd0;">col-4</div><div class="bs-col" style="background:#b8ccb0;">col-4</div><div class="bs-col" style="background:#f0e8b0;">col-4</div></div>
+      <div class="bs-row"><div class="bs-col" style="flex:2;background:#f0d0c8;">col-8</div><div class="bs-col" style="flex:1;background:#b8d4e0;">col-4</div></div>
+      <div class="bs-row"><div class="bs-col" style="flex:1;background:#f2c4a8;">col-3</div><div class="bs-col" style="flex:2;background:#eeddd0;">col-6</div><div class="bs-col" style="flex:1;background:#b8ccb0;">col-3</div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reveals" style="margin-bottom:44px;">
+    <h2 class="section-heading">Components <em>I Use in My Projects</em></h2>
+    <div class="grid-2" style="margin-bottom:24px;">
+      <div class="card card-body">
+        <h3 style="font-family:var(--ff-h);color:var(--ink);margin-bottom:14px;font-weight:700;">Button Variants I Use</h3>
+        <div class="bs-btns">
+          <button class="bsb p">btn-primary</button>
+          <button class="bsb s">btn-success</button>
+          <button class="bsb w">btn-warning</button>
+          <button class="bsb d">btn-danger</button>
+          <button class="bsb sec">btn-secondary</button>
+          <button class="bsb op">btn-outline-primary</button>
+        </div>
+        <div class="code-block" style="margin-top:14px;font-size:.74rem;padding-top:28px;">
+<span class="t">&lt;button</span> <span class="a">class</span>=<span class="v">"btn btn-primary"</span><span class="t">&gt;</span>Primary<span class="t">&lt;/button&gt;</span>
+<span class="t">&lt;button</span> <span class="a">class</span>=<span class="v">"btn btn-outline-primary"</span><span class="t">&gt;</span>Outline<span class="t">&lt;/button&gt;</span>
+        </div>
+      </div>
+      <div class="card card-body">
+        <h3 style="font-family:var(--ff-h);color:var(--ink);margin-bottom:14px;font-weight:700;">Nav Tabs | Click Me!</h3>
+        <div class="bs-tabs">
+          <div class="bs-tab active" onclick="setTab(this)">Home</div>
+          <div class="bs-tab" onclick="setTab(this)">About Me</div>
+          <div class="bs-tab" onclick="setTab(this)">Projects</div>
+          <div class="bs-tab" onclick="setTab(this)">Contact</div>
+        </div>
+        <div style="padding:14px;background:var(--bg);border-radius:0 0 12px 12px;font-size:.84rem;border:1px solid var(--border);border-top:none;">
+          I use Bootstrap tabs to organise content into sections without page reloads. The active class is managed by Bootstrap&rsquo;s JavaScript.
+        </div>
+      </div>
+    </div>
+    <h3 style="font-family:var(--ff-h);color:var(--ink);margin-bottom:16px;font-size:1.5rem;font-weight:700;">Bootstrap <em>Cards</em> I Build</h3>
+    <div class="grid-3">
+      <div class="bs-demo-card"><div class="bs-card-img" style="background:linear-gradient(135deg,#eeddd0,#b8d4e0);"></div><div class="bs-card-bd"><h5>My E-Commerce Project</h5><p>Responsive product listing page using Bootstrap&rsquo;s card grid.</p><button class="bsb p sm">View Project</button></div></div>
+      <div class="bs-demo-card"><div class="bs-card-img" style="background:linear-gradient(135deg,#b8ccb0,#f0e8b0);"></div><div class="bs-card-bd"><h5>My Weather Dashboard</h5><p>Dashboard using Bootstrap utilities and a weather data source.</p><button class="bsb s sm">View Project</button></div></div>
+      <div class="bs-demo-card"><div class="bs-card-img" style="background:linear-gradient(135deg,#f0d0c8,#f2c4a8);"></div><div class="bs-card-bd"><h5>My Blog Platform</h5><p>Blog layout using Bootstrap cards, modals and responsive breakpoints.</p><button class="bsb w sm">View Project</button></div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reveals">
+    <h2 class="section-heading">Utility Classes <em>I Use Daily</em></h2>
+    <p class="section-sub">Bootstrap utilities let me apply spacing, display and flex behaviour directly in HTML without writing custom CSS every time.</p>
+    <div class="code-block" style="padding-top:32px;">
+<span class="c">&lt;!-- Spacing: m=margin, p=padding + side + size --&gt;</span>
+<span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"mt-4 mb-2 px-3"</span><span class="t">&gt;</span>Margin top 4, bottom 2, padding x 3<span class="t">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Flexbox with no custom CSS --&gt;</span>
+<span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"d-flex justify-content-between align-items-center gap-3"</span><span class="t">&gt;</span>...<span class="t">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Text styling on my headings --&gt;</span>
+<span class="t">&lt;h2</span> <span class="a">class</span>=<span class="v">"text-center fw-bold text-primary fs-4"</span><span class="t">&gt;</span>My Heading<span class="t">&lt;/h2&gt;</span>
+
+<span class="c">&lt;!-- Hide on mobile, show md+ --&gt;</span>
+<span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"d-none d-md-block"</span><span class="t">&gt;</span>Desktop only<span class="t">&lt;/div&gt;</span>
+
+<span class="c">&lt;!-- Card with built-in rounding and shadow --&gt;</span>
+<span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"card rounded-3 shadow-sm p-3"</span><span class="t">&gt;</span>Card content<span class="t">&lt;/div&gt;</span>
+    </div>
+  </div>
+
+  <div class="page-nav-btns reveals">
+    <a href="css.html" class="btn btn-outline">&larr; CSS</a>
+    <a href="javascript.html" class="btn btn-plum">Next: JavaScript &rarr;</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-name">Aashika Dallakoti</div>
+  <p>BSc Hons (Computer System Engineering) | Final Year Student | Graduating 2026</p>
+  <p style="margin-top:6px;">Applying for <strong>Junior Full Stack Developer</strong> positions &middot; <a href="/cdn-cgi/l/email-protection#6400050808050f0b100d0505170c0d0f05240309050d084a070b09" style="color:var(--clay)"><span class="__cf_email__" data-cfemail="81e5e0edede0eaeef5e8e0e0f2e9e8eae0c1e6ece0e8edafe2eeec">[email&#160;protected]</span></a></p>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a><a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <script src="script.js"></script>

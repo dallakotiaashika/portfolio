@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>JavaScript | Aashika Dallakoti</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo" src="profile.jpg" alt="Aashika">
+    <span class="nav-name">Aashika Dallakoti</span>
+  </a>
+  <div class="nav-menu">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="fullstack.html">Full Stack</a>
+    <a class="nav-link" href="html.html">HTML</a>
+    <a class="nav-link" href="css.html">CSS</a>
+    <a class="nav-link" href="bootstrap.html">Bootstrap</a>
+    <a class="nav-link" href="javascript.html">JavaScript</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <div class="reveals">
+    <span class="label">Section 5 of 5 | Aashika Dallakoti</span>
+    <h1 class="page-title"><em>JavaScript</em> | How I Make<br>Pages Interactive</h1>
+    <p class="page-intro">JavaScript is what separates a static page from a real web application. I use it to respond to user interactions, update the DOM without page reloads, validate forms and fetch data. The <strong>four live demos below are all built by me</strong>, each demonstrating a different set of real JavaScript skills.</p>
+  </div>
+
+  <div class="grid-2 reveals" style="margin-bottom:44px;">
+    <div class="code-block" style="padding-top:32px;">
+<span class="c">// Fundamentals I use in every project</span>
+<span class="k">const</span> name  = <span class="s">"Aashika"</span>;
+<span class="k">let</span>   score = <span class="v">0</span>;
+<span class="k">const</span> skills = [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JS"</span>];
+
+<span class="k">function</span> <span class="fn">greet</span>(n) {
+  <span class="k">return</span> <span class="s">`Hello, ${n}! Welcome.`</span>;
+}
+<span class="k">const</span> <span class="fn">double</span> = (n) => n * <span class="v">2</span>;
+
+<span class="c">// DOM manipulation I use constantly</span>
+<span class="k">const</span> btn = document
+  .<span class="fn">getElementById</span>(<span class="s">'myBtn'</span>);
+btn.<span class="fn">addEventListener</span>(<span class="s">'click'</span>, () => {
+  document.<span class="fn">querySelector</span>(<span class="s">'.out'</span>)
+    .textContent = <span class="fn">greet</span>(name);
+});
+    </div>
+    <div class="code-block" style="padding-top:32px;">
+<span class="c">// Array methods I use for data</span>
+<span class="k">const</span> scores = [<span class="v">85</span>,<span class="v">92</span>,<span class="v">78</span>,<span class="v">95</span>];
+
+<span class="k">const</span> passing = scores
+  .<span class="fn">filter</span>(s => s >= <span class="v">80</span>);   <span class="c">// [85,92,95]</span>
+<span class="k">const</span> doubled = scores
+  .<span class="fn">map</span>(s => s * <span class="v">2</span>);         <span class="c">// [170,184...]</span>
+
+<span class="c">// Async fetch I use to call data sources</span>
+<span class="k">async function</span> <span class="fn">loadData</span>() {
+  <span class="k">try</span> {
+    <span class="k">const</span> res = <span class="k">await</span> <span class="fn">fetch</span>(<span class="s">'/data'</span>);
+    <span class="k">const</span> d   = <span class="k">await</span> res.<span class="fn">json</span>();
+    <span class="fn">display</span>(d);
+  } <span class="k">catch</span>(err) {
+    console.<span class="fn">error</span>(<span class="s">"Error:"</span>, err);
+  }
+}
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="reveals">
+    <h2 class="section-heading">Four Live Demos <em>I Built Myself</em></h2>
+    <p class="section-sub">Every demo runs directly in your browser using the JavaScript I wrote in <code>script.js</code>.</p>
+  </div>
+
+  <div class="js-grid reveals">
+    <div class="card card-body js-card">
+      <div class="js-tag">DOM Manipulation</div>
+      <h3>&#128290; Counter I Built</h3>
+      <p class="js-desc">Uses <strong>let variable</strong>, <strong>function</strong>, <strong>ternary operator</strong> for reset and <strong>element.style</strong> to change colour by value.</p>
+      <div class="counter-display" id="counterVal">0</div>
+      <div class="counter-btns">
+        <button class="c-btn" onclick="changeCount(-1)">&minus;</button>
+        <button class="c-btn rst" onclick="changeCount(0)">Reset</button>
+        <button class="c-btn" onclick="changeCount(1)">+</button>
+      </div>
+      <div class="code-block" style="margin-top:14px;font-size:.73rem;padding-top:26px;">
+<span class="k">let</span> count = <span class="v">0</span>;
+<span class="k">function</span> <span class="fn">changeCount</span>(n) {
+  count = (n===<span class="v">0</span>) ? <span class="v">0</span> : count+n;
+  el.textContent = count;
+  el.style.color = count><span class="v">0</span>?<span class="s">"green"</span>
+    :count&lt;<span class="v">0</span>?<span class="s">"red"</span>:<span class="s">"brown"</span>;
+}
+      </div>
+    </div>
+
+    <div class="card card-body js-card">
+      <div class="js-tag">DOM Creation and Events</div>
+      <h3>&#9989; To-Do List I Built</h3>
+      <p class="js-desc">Uses <strong>createElement</strong>, <strong>appendChild</strong>, <strong>classList.toggle</strong>, <strong>template literals</strong> and HTML escaping to prevent XSS.</p>
+      <div class="todo-row">
+        <input type="text" class="todo-inp" id="todoInput" placeholder="Add a task&hellip;">
+        <button class="todo-add" onclick="addTodo()">Add</button>
+      </div>
+      <ul class="todo-list" id="todoList"></ul>
+    </div>
+
+    <div class="card card-body js-card">
+      <div class="js-tag">data-* Attributes</div>
+      <h3>&#127912; Colour Picker I Built</h3>
+      <p class="js-desc">Reads <strong>data-color</strong> and <strong>data-name</strong> attributes, updates <strong>element.style.background</strong> and manages active state with <strong>querySelectorAll</strong>.</p>
+      <div class="color-box" id="colorBox">Click a colour below!</div>
+      <div class="swatches">
+        <div class="swatch active" style="background:#eeddd0;" data-color="#eeddd0" data-name="Sand" onclick="pickColor(this)"></div>
+        <div class="swatch" style="background:#b8ccb0;" data-color="#b8ccb0" data-name="Sage" onclick="pickColor(this)"></div>
+        <div class="swatch" style="background:#f0e8b0;" data-color="#f0e8b0" data-name="Lemon" onclick="pickColor(this)"></div>
+        <div class="swatch" style="background:#f0d0c8;" data-color="#f0d0c8" data-name="Blush" onclick="pickColor(this)"></div>
+        <div class="swatch" style="background:#b8d4e0;" data-color="#b8d4e0" data-name="Sky" onclick="pickColor(this)"></div>
+        <div class="swatch" style="background:#f2c4a8;" data-color="#f2c4a8" data-name="Peach" onclick="pickColor(this)"></div>
+      </div>
+      <div class="code-block" style="margin-top:12px;font-size:.73rem;padding-top:26px;">
+<span class="k">function</span> <span class="fn">pickColor</span>(el) {
+  document.<span class="fn">querySelectorAll</span>(<span class="s">'.swatch'</span>)
+    .<span class="fn">forEach</span>(s=>s.classList
+    .<span class="fn">remove</span>(<span class="s">'active'</span>));
+  box.style.background=el.dataset.color;
+}
+      </div>
+    </div>
+
+    <div class="card card-body js-card">
+      <div class="js-tag">Arrays and Math.random</div>
+      <h3>&#128172; Quote Rotator I Built</h3>
+      <p class="js-desc">Stores quotes in an <strong>array of objects</strong>, picks a random index with <strong>Math.random()</strong> and prevents repeat quotes with a last-index check.</p>
+      <div class="q-box"><p class="q-text" id="quoteText">&ldquo;The only way to do great work is to love what you do.&rdquo;</p></div>
+      <p class="q-author" id="quoteAuthor">&mdash; Steve Jobs</p>
+      <button class="q-btn" onclick="newQuote()">&#10022; New Quote</button>
+      <div class="code-block" style="margin-top:12px;font-size:.73rem;padding-top:26px;">
+<span class="k">const</span> quotes = [{text:<span class="s">"..."</span>,author:<span class="s">"..."</span>}];
+<span class="k">function</span> <span class="fn">newQuote</span>() {
+  <span class="k">const</span> i=Math.<span class="fn">floor</span>(
+    Math.<span class="fn">random</span>()*quotes.length);
+  el.textContent=<span class="s">`"${quotes[i].text}"`</span>;
+}
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav-btns reveals">
+    <a href="bootstrap.html" class="btn btn-outline">&larr; Bootstrap</a>
+    <a href="contact.html" class="btn btn-plum">Contact Me &rarr;</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-name">Aashika Dallakoti</div>
+  <p>BSc Hons (Computer System Engineering) | Final Year Student | Graduating 2026</p>
+  <p style="margin-top:6px;">Applying for <strong>Junior Full Stack Developer</strong> positions &middot; <a href="/cdn-cgi/l/email-protection#6105000d0d000a0e150800001209080a0021060c00080d4f020e0c" style="color:var(--clay)"><span class="__cf_email__" data-cfemail="6703060b0b060c08130e0606140f0e0c0627000a060e0b4904080a">[email&#160;protected]</span></a></p>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a><a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <script src="script.js"></script>
+    <script src="script.js"></script>

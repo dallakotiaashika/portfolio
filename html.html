@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>HTML | Aashika Dallakoti</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo" src="profile.jpg" alt="Aashika">
+    <span class="nav-name">Aashika Dallakoti</span>
+  </a>
+  <div class="nav-menu">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="fullstack.html">Full Stack</a>
+    <a class="nav-link" href="html.html">HTML</a>
+    <a class="nav-link" href="css.html">CSS</a>
+    <a class="nav-link" href="bootstrap.html">Bootstrap</a>
+    <a class="nav-link" href="javascript.html">JavaScript</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <div class="reveals">
+    <span class="label">Section 2 of 5 | Aashika Dallakoti</span>
+    <h1 class="page-title"><em>HTML</em> | How I<br>Structure Web Pages</h1>
+    <p class="page-intro">HTML is the foundation of every page I build. I always write <strong>semantic HTML5</strong>, using the correct element for each purpose. This improves accessibility, helps search engines understand my pages and makes my code readable for other developers.</p>
+  </div>
+
+  <div class="grid-2 reveals" style="margin-bottom:44px;">
+    <div>
+      <h2 class="section-heading" style="font-size:1.3rem;margin-bottom:10px;">&#10060; How I <em>used to</em> write HTML</h2>
+      <p style="font-size:.85rem;margin-bottom:10px;color:var(--muted);">Before learning semantics, everything was just divs with no real meaning.</p>
+      <div class="code-block" style="padding-top:32px;">
+<span class="c">&lt;!-- Non-semantic: everything is &lt;div&gt; --&gt;</span>
+<span class="t">&lt;div</span> <span class="a">id</span>=<span class="v">"top"</span><span class="t">&gt;</span>
+  <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"menu"</span><span class="t">&gt;</span>
+    <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"item"</span><span class="t">&gt;</span>Home<span class="t">&lt;/div&gt;</span>
+  <span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;div</span> <span class="a">id</span>=<span class="v">"wrap"</span><span class="t">&gt;</span>
+  <span class="t">&lt;div</span> <span class="a">class</span>=<span class="v">"title"</span><span class="t">&gt;</span>Hello<span class="t">&lt;/div&gt;</span>
+<span class="t">&lt;/div&gt;</span>
+      </div>
+    </div>
+    <div>
+      <h2 class="section-heading" style="font-size:1.3rem;margin-bottom:10px;">&#10003; How I <em>now</em> write HTML</h2>
+      <p style="font-size:.85rem;margin-bottom:10px;color:var(--muted);">Semantic elements give clear meaning to browsers, screen readers and search engines.</p>
+      <div class="code-block" style="padding-top:32px;">
+<span class="c">&lt;!-- Semantic HTML5: clear purpose --&gt;</span>
+<span class="t">&lt;header&gt;</span>
+  <span class="t">&lt;nav&gt;</span>
+    <span class="t">&lt;a</span> <span class="a">href</span>=<span class="v">"/"</span><span class="t">&gt;</span>Home<span class="t">&lt;/a&gt;</span>
+  <span class="t">&lt;/nav&gt;</span>
+<span class="t">&lt;/header&gt;</span>
+<span class="t">&lt;main&gt;</span>
+  <span class="t">&lt;article&gt;</span>
+    <span class="t">&lt;h1&gt;</span>Hello<span class="t">&lt;/h1&gt;</span>
+  <span class="t">&lt;/article&gt;</span>
+<span class="t">&lt;/main&gt;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reveals" style="margin-bottom:44px;">
+    <h2 class="section-heading">My Project <em>Boilerplate</em></h2>
+    <p class="section-sub">Every project I start uses this structure. The viewport meta tag, linked stylesheet and semantic body elements are always there from the beginning.</p>
+    <div class="code-block" style="padding-top:32px;">
+<span class="t">&lt;!DOCTYPE html&gt;</span>
+<span class="t">&lt;html</span> <span class="a">lang</span>=<span class="v">"en"</span><span class="t">&gt;</span>
+  <span class="t">&lt;head&gt;</span>
+    <span class="t">&lt;meta</span> <span class="a">charset</span>=<span class="v">"UTF-8"</span><span class="t">&gt;</span>
+    <span class="t">&lt;meta</span> <span class="a">name</span>=<span class="v">"viewport"</span> <span class="a">content</span>=<span class="v">"width=device-width, initial-scale=1.0"</span><span class="t">&gt;</span>
+    <span class="t">&lt;title&gt;</span>My Project<span class="t">&lt;/title&gt;</span>
+    <span class="t">&lt;link</span> <span class="a">rel</span>=<span class="v">"stylesheet"</span> <span class="a">href</span>=<span class="v">"style.css"</span><span class="t">&gt;</span>
+  <span class="t">&lt;/head&gt;</span>
+  <span class="t">&lt;body&gt;</span>
+    <span class="t">&lt;header&gt;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a</span> <span class="a">href</span>=<span class="v">"#"</span><span class="t">&gt;</span>Home<span class="t">&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/header&gt;</span>
+    <span class="t">&lt;main&gt;</span>
+      <span class="t">&lt;section&gt;</span>
+        <span class="t">&lt;h1&gt;</span>Welcome to My Portfolio<span class="t">&lt;/h1&gt;</span>
+        <span class="t">&lt;article&gt;</span>
+          <span class="t">&lt;h2&gt;</span>About Me<span class="t">&lt;/h2&gt;</span>
+          <span class="t">&lt;p&gt;</span>I am Aashika, a BSc Computer System Engineering student...<span class="t">&lt;/p&gt;</span>
+          <span class="t">&lt;img</span> <span class="a">src</span>=<span class="v">"profile.jpg"</span> <span class="a">alt</span>=<span class="v">"Aashika Dallakoti"</span><span class="t">&gt;</span>
+        <span class="t">&lt;/article&gt;</span>
+      <span class="t">&lt;/section&gt;</span>
+    <span class="t">&lt;/main&gt;</span>
+    <span class="t">&lt;footer&gt;&lt;p&gt;</span>&amp;copy; 2026 Aashika Dallakoti<span class="t">&lt;/p&gt;&lt;/footer&gt;</span>
+    <span class="t">&lt;script</span> <span class="a">src</span>=<span class="v">"script.js"</span><span class="t">&gt;&lt;/script&gt;</span>
+  <span class="t">&lt;/body&gt;</span>
+<span class="t">&lt;/html&gt;</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="grid-2 reveals" style="margin-bottom:44px;">
+    <div>
+      <h2 class="section-heading" style="font-size:1.3rem;margin-bottom:12px;">Forms <em>I Build</em></h2>
+      <p style="font-size:.85rem;margin-bottom:12px;color:var(--muted);">I always link labels to inputs using <code>for</code> and <code>id</code>. Try clicking Submit with empty or invalid data!</p>
+      <div class="code-block" style="margin-bottom:14px;padding-top:32px;">
+<span class="t">&lt;form&gt;</span>
+  <span class="t">&lt;label</span> <span class="a">for</span>=<span class="v">"name"</span><span class="t">&gt;</span>Full Name<span class="t">&lt;/label&gt;</span>
+  <span class="t">&lt;input</span> <span class="a">type</span>=<span class="v">"text"</span> <span class="a">id</span>=<span class="v">"name"</span> <span class="a">required</span><span class="t">&gt;</span>
+  <span class="t">&lt;label</span> <span class="a">for</span>=<span class="v">"email"</span><span class="t">&gt;</span>Email<span class="t">&lt;/label&gt;</span>
+  <span class="t">&lt;input</span> <span class="a">type</span>=<span class="v">"email"</span> <span class="a">id</span>=<span class="v">"email"</span> <span class="a">required</span><span class="t">&gt;</span>
+  <span class="t">&lt;button</span> <span class="a">type</span>=<span class="v">"submit"</span><span class="t">&gt;</span>Submit<span class="t">&lt;/button&gt;</span>
+<span class="t">&lt;/form&gt;</span>
+      </div>
+      <div class="html-preview">
+        <h4>&#10022; Live Form with Validation:</h4>
+        <div class="demo-form">
+          <label for="demoName">Full Name</label>
+          <input type="text" id="demoName" placeholder="Your name" class="demo-input">
+          <div class="field-error" id="demoNameErr"></div>
+          <label for="demoEmail" style="margin-top:10px;">Email Address</label>
+          <input type="email" id="demoEmail" placeholder="you@email.com" class="demo-input">
+          <div class="field-error" id="demoEmailErr"></div>
+          <button id="demoSubmitBtn" class="btn btn-plum btn-sm" style="margin-top:14px;" onclick="submitDemoForm()">Submit</button>
+          <div class="form-success-msg" id="demoSuccess"><span class="check">&#10003;</span> Form submitted successfully!</div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2 class="section-heading" style="font-size:1.3rem;margin-bottom:12px;">Tables <em>I Build</em></h2>
+      <p style="font-size:.85rem;margin-bottom:12px;color:var(--muted);">I always use <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> to separate headers from data for better accessibility.</p>
+      <div class="code-block" style="margin-bottom:14px;padding-top:32px;">
+<span class="t">&lt;table&gt;</span>
+  <span class="t">&lt;thead&gt;</span>
+    <span class="t">&lt;tr&gt;&lt;th&gt;</span>Skill<span class="t">&lt;/th&gt;&lt;th&gt;</span>Level<span class="t">&lt;/th&gt;&lt;/tr&gt;</span>
+  <span class="t">&lt;/thead&gt;</span>
+  <span class="t">&lt;tbody&gt;</span>
+    <span class="t">&lt;tr&gt;&lt;td&gt;</span>HTML<span class="t">&lt;/td&gt;&lt;td&gt;</span>Advanced<span class="t">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="t">&lt;tr&gt;&lt;td&gt;</span>CSS<span class="t">&lt;/td&gt;&lt;td&gt;</span>Advanced<span class="t">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="t">&lt;/tbody&gt;</span>
+<span class="t">&lt;/table&gt;</span>
+      </div>
+      <div class="html-preview">
+        <h4>&#10022; My Table Preview:</h4>
+        <table class="demo-table">
+          <thead><tr><th>Skill</th><th>Level</th><th>Projects Used In</th></tr></thead>
+          <tbody>
+            <tr><td>HTML5</td><td>Advanced</td><td>All projects</td></tr>
+            <tr><td>CSS3</td><td>Advanced</td><td>All projects</td></tr>
+            <tr><td>JavaScript</td><td>Intermediate</td><td>Interactive apps</td></tr>
+            <tr><td>Bootstrap</td><td>Advanced</td><td>Responsive layouts</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveals">
+    <h2 class="section-heading">Semantic Elements <em>I Use in Every Project</em></h2>
+    <div class="grid-3">
+      <div class="card card-body sem-card"><code>&lt;header&gt;</code><p>Logo, site title and navigation. Always at the top of my pages.</p></div>
+      <div class="card card-body sem-card"><code>&lt;nav&gt;</code><p>Wraps navigation links. Screen readers identify this as a landmark.</p></div>
+      <div class="card card-body sem-card"><code>&lt;main&gt;</code><p>The primary unique content of the page. One per page only.</p></div>
+      <div class="card card-body sem-card"><code>&lt;section&gt;</code><p>Groups thematically related content with a heading.</p></div>
+      <div class="card card-body sem-card"><code>&lt;article&gt;</code><p>Self-contained content such as blog posts, portfolio cards and news items.</p></div>
+      <div class="card card-body sem-card"><code>&lt;aside&gt;</code><p>Supplementary content, sidebars or related links.</p></div>
+      <div class="card card-body sem-card"><code>&lt;figure&gt;</code><p>Wraps images. I use &lt;figcaption&gt; for accessible captions.</p></div>
+      <div class="card card-body sem-card"><code>&lt;footer&gt;</code><p>Copyright, contact links, secondary navigation at bottom.</p></div>
+      <div class="card card-body sem-card"><code>&lt;time&gt;</code><p>Marks dates with a machine-readable <code>datetime</code> attribute.</p></div>
+    </div>
+  </div>
+
+  <div class="page-nav-btns reveals">
+    <a href="fullstack.html" class="btn btn-outline">&larr; Full Stack</a>
+    <a href="css.html" class="btn btn-plum">Next: CSS &rarr;</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-name">Aashika Dallakoti</div>
+  <p>BSc Hons (Computer System Engineering) | Final Year Student | Graduating 2026</p>
+  <p style="margin-top:6px;">Actively applying for <strong>Junior Full Stack Developer</strong> positions &middot; <a href="/cdn-cgi/l/email-protection#e682878a8a878d89928f8787958e8f8d87a6818b878f8ac885898b" style="color:var(--clay)"><span class="__cf_email__" data-cfemail="8aeeebe6e6ebe1e5fee3ebebf9e2e3e1ebcaede7ebe3e6a4e9e5e7">[email&#160;protected]</span></a></p>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a><a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <script src="script.js"></script>

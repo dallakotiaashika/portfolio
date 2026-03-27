@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Contact | Aashika Dallakoti</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo" src="profile.jpg" alt="Aashika">
+    <span class="nav-name">Aashika Dallakoti</span>
+  </a>
+  <div class="nav-menu">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="fullstack.html">Full Stack</a>
+    <a class="nav-link" href="html.html">HTML</a>
+    <a class="nav-link" href="css.html">CSS</a>
+    <a class="nav-link" href="bootstrap.html">Bootstrap</a>
+    <a class="nav-link" href="javascript.html">JavaScript</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <div class="reveal">
+    <span class="label">Get In Touch | Aashika Dallakoti</span>
+    <h1 class="page-title">Let&rsquo;s <em>Work Together</em></h1>
+    <p class="page-intro">I&rsquo;m <strong>Aashika Dallakoti</strong>, a BSc Hons (Computer System Engineering) final year student graduating in 2026. I am actively applying for junior full stack developer positions. If you have a role, project or opportunity I would genuinely love to hear from you.</p>
+  </div>
+
+  <div class="grid-2 reveal">
+    <div>
+      <div class="ci-cards">
+        <div class="card card-body ci-card">
+          <div class="ci-icon">&#128140;</div>
+          <div><h4>Email</h4><p><a href="mailto:dallakotiaashika@gmail.com">dallakotiaashika@gmail.com</a></p></div>
+        </div>
+        <div class="card card-body ci-card">
+          <div class="ci-icon">&#128101;</div>
+          <div><h4>LinkedIn</h4><p>linkedin.com/in/aashika-dallakoti</p></div>
+        </div>
+        <div class="card card-body ci-card">
+          <div class="ci-icon">&#128187;</div>
+          <div><h4>GitHub</h4><p>github.com/aashika-dallakoti</p></div>
+        </div>
+        <div class="card card-body ci-card">
+          <div class="ci-icon">&#127979;</div>
+          <div><h4>Education</h4><p>BSc Hons (Computer System Engineering)<br>Final Year | Graduating 2026</p></div>
+        </div>
+        <div class="card card-body ci-card">
+          <div class="ci-icon">&#128205;</div>
+          <div><h4>Location</h4><p>Nepal | Open to Remote and Relocation</p></div>
+        </div>
+      </div>
+      <div class="card card-body" style="margin-top:18px;background:linear-gradient(135deg,var(--sand),var(--blush));border:none;">
+        <h3 style="font-family:var(--ff-h);color:var(--ink);margin-bottom:12px;font-weight:700;">What I&rsquo;m Looking For</h3>
+        <ul style="font-size:.88rem;line-height:2.2;padding-left:18px;list-style:disc;">
+          <li>Junior Full Stack Developer roles</li>
+          <li>Junior Frontend Developer positions</li>
+          <li>Graduate schemes and trainee programmes</li>
+          <li>Paid internships in web development</li>
+          <li>Freelance web development projects</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-body">
+      <h3 style="font-family:var(--ff-h);color:var(--ink);margin-bottom:6px;font-size:1.7rem;font-weight:700;">Send Me a Message</h3>
+      <p style="font-size:.83rem;margin-bottom:20px;color:var(--muted);">I reply within 24 hours. Job offer, project enquiry or a question about my portfolio, all welcome.</p>
+      <form onsubmit="handleContact(event)">
+        <div class="form-group">
+          <label class="form-lbl">Your Name</label>
+          <input type="text" id="cName" class="form-inp" placeholder="Your full name">
+          <div class="field-error" id="cNameErr"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-lbl">Your Email</label>
+          <input type="email" id="cEmail" class="form-inp" placeholder="you@company.com">
+          <div class="field-error" id="cEmailErr"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-lbl">Reason for Contact</label>
+          <select class="form-inp">
+            <option>Job Opportunity</option><option>Freelance Project</option>
+            <option>Internship</option><option>Collaboration</option><option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-lbl">Message</label>
+          <textarea id="cMsg" class="form-inp" rows="5" placeholder="Tell me about the opportunity or project..."></textarea>
+          <div class="field-error" id="cMsgErr"></div>
+        </div>
+        <button type="submit" id="sendBtn" class="btn btn-plum" style="width:100%;justify-content:center;">
+          Send Message &#10148;
+        </button>
+        <div class="form-success-msg" id="formOk">
+          <span class="check">&#10003;</span>
+          Message sent! I&rsquo;ll reply within 24 hours | dallakotiaashika@gmail.com
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="page-nav-btns reveal">
+    <a href="javascript.html" class="btn btn-outline">&larr; JavaScript</a>
+    <a href="index.html" class="btn btn-plum">Back to Home</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-name">Aashika Dallakoti</div>
+  <p>BSc Hons (Computer System Engineering) | Final Year Student | Graduating 2026</p>
+  <p style="margin-top:6px;">Applying for <strong>Junior Full Stack Developer</strong> positions &middot; <a href="mailto:dallakotiaashika@gmail.com" style="color:var(--clay)">dallakotiaashika@gmail.com</a></p>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a><a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a><a href="javascript.html">JavaScript</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

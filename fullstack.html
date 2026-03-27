@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Full Stack Development | Aashika Dallakoti</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo" src="profile.jpg" alt="Aashika">
+    <span class="nav-name">Aashika Dallakoti</span>
+  </a>
+  <div class="nav-menu">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="fullstack.html">Full Stack</a>
+    <a class="nav-link" href="html.html">HTML</a>
+    <a class="nav-link" href="css.html">CSS</a>
+    <a class="nav-link" href="bootstrap.html">Bootstrap</a>
+    <a class="nav-link" href="javascript.html">JavaScript</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <div class="reveals">
+    <span class="label">Section 1 of 5 / Aashika Dallakoti</span>
+    <h1 class="page-title">What is <em>Full Stack</em><br>Development?</h1>
+    <p class="page-intro">As someone applying for junior full stack developer positions, I need to clearly understand what the role means. Full stack development means working on <strong>every layer</strong> of a web application: the interface users see in their browser, the server logic running behind the scenes and the database persisting all the data.</p>
+  </div>
+
+  <div class="grid-2 reveals" style="margin-bottom:44px;">
+    <div class="card card-body card-accent-rose pillar-card">
+      <div class="pillar-icon">&#127912;</div>
+      <h3 class="section-heading" style="font-size:1.25rem;">Frontend / What I Build First</h3>
+      <p>Everything the user <strong>sees and interacts with</strong> in the browser. I use HTML to structure content, CSS to style it and JavaScript to make it dynamic. Bootstrap helps me build responsive layouts quickly without writing all CSS from scratch.</p>
+      <div class="pill-row"><span class="pill pill-lav">HTML5</span><span class="pill pill-lav">CSS3</span><span class="pill pill-lav">JavaScript</span><span class="pill pill-lav">Bootstrap</span></div>
+    </div>
+    <div class="card card-body card-accent-mint pillar-card">
+      <div class="pillar-icon">&#9881;&#65039;</div>
+      <h3 class="section-heading" style="font-size:1.25rem;">Backend / The Hidden Engine</h3>
+      <p>Runs on a server and handles everything the user never sees directly: <strong>business logic, authentication and data processing</strong>. When a login form is submitted, the backend checks credentials. I am building my PHP skills to create server side scripts and handle form processing.</p>
+      <div class="pill-row"><span class="pill pill-mint">PHP</span><span class="pill pill-mint">Server Side</span><span class="pill pill-mint">Form Handling</span><span class="pill pill-mint">Sessions</span></div>
+    </div>
+    <div class="card card-body card-accent-butter pillar-card">
+      <div class="pillar-icon">&#128451;&#65038;</div>
+      <h3 class="section-heading" style="font-size:1.25rem;">Database / Where Data Lives</h3>
+      <p>Every web application needs somewhere to <strong>store and retrieve data persistently</strong>. I have worked with SQL using relational databases including MariaDB. The backend queries the database and returns data to the frontend as needed.</p>
+      <div class="pill-row"><span class="pill pill-butter">SQL</span><span class="pill pill-butter">MariaDB</span><span class="pill pill-butter">Queries</span><span class="pill pill-butter">Joins</span></div>
+    </div>
+    <div class="card card-body card-accent-sky pillar-card">
+      <div class="pillar-icon">&#128268;</div>
+      <h3 class="section-heading" style="font-size:1.25rem;">How It All Connects</h3>
+      <p>The frontend and backend <strong>communicate over HTTP</strong>. The browser sends a request, my PHP script processes it, queries the database and sends a response back. The frontend then displays the result to the user.</p>
+      <div class="pill-row"><span class="pill">GET</span><span class="pill">POST</span><span class="pill">HTTP</span><span class="pill">JSON</span></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reveals" style="margin-bottom:44px;">
+    <h2 class="section-heading">How a Request Flows Through <em>My Full Stack App</em></h2>
+    <p class="section-sub">A diagram showing what happens when a user interacts with a web application I build, from browser click through my server to the database and back again.</p>
+    <div class="card card-body">
+      <div class="arch-flow">
+        <div class="arch-box arch-fe"><div class="arch-lbl">&#127760; USER BROWSER</div><div class="arch-tech">HTML | CSS | JavaScript I write</div></div>
+        <div class="arch-arr"><span class="arch-line"></span><span class="arch-lbl2">HTTP Request<br>(GET / POST)</span></div>
+        <div class="arch-box arch-be"><div class="arch-lbl">&#9881; MY SERVER</div><div class="arch-tech">PHP | Server Side Logic</div></div>
+        <div class="arch-arr"><span class="arch-line"></span><span class="arch-lbl2">SQL Query</span></div>
+        <div class="arch-box arch-db"><div class="arch-lbl">&#128451; DATABASE</div><div class="arch-tech">SQL | MariaDB</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reveals">
+    <h2 class="section-heading">My Current <em>Confidence Levels</em></h2>
+    <p class="section-sub">As a BSc Hons (Computer System Engineering) final year student I am strongest on the frontend. I have also built backend and database projects during my degree.</p>
+    <div class="skill-tbl card">
+      <table>
+        <thead><tr><th>Layer</th><th>Technology</th><th>What I Use It For</th><th>My Confidence</th></tr></thead>
+        <tbody>
+          <tr><td>Frontend</td><td>HTML5</td><td>Structuring all web pages with semantic elements</td><td><span class="skill-bar" data-w="92"></span></td></tr>
+          <tr><td>Frontend</td><td>CSS3 / Bootstrap</td><td>Styling, layouts, responsive design</td><td><span class="skill-bar" data-w="88"></span></td></tr>
+          <tr><td>Frontend</td><td>JavaScript</td><td>DOM manipulation, events, fetch API</td><td><span class="skill-bar" data-w="82"></span></td></tr>
+          <tr><td>Backend</td><td>PHP</td><td>Server side scripting, form handling, sessions</td><td><span class="skill-bar" data-w="65"></span></td></tr>
+          <tr><td>Database</td><td>SQL / MariaDB</td><td>Storing and querying application data</td><td><span class="skill-bar" data-w="64"></span></td></tr>
+          <tr><td>Tools</td><td>Git / GitHub</td><td>Version control on all my projects</td><td><span class="skill-bar" data-w="80"></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="page-nav-btns reveals">
+    <a href="index.html" class="btn btn-outline">&larr; Home</a>
+    <a href="html.html" class="btn btn-plum">Next: HTML &rarr;</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-name">Aashika Dallakoti</div>
+  <p>BSc Hons (Computer System Engineering) | Final Year Student | Graduating 2026</p>
+  <p style="margin-top:6px;">Actively applying for <strong>Junior Full Stack Developer</strong> positions &middot; <a href="/cdn-cgi/l/email-protection#2b4f4a47474a40445f424a4a584342404a6b4c464a424705484446" style="color:var(--clay)"><span class="__cf_email__" data-cfemail="84e0e5e8e8e5efebf0ede5e5f7ecedefe5c4e3e9e5ede8aae7ebe9">[email&#160;protected]</span></a></p>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a><a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <script src="script.js"></script>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>CSS | Aashika Dallakoti</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="page-styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <a class="nav-brand" href="index.html">
+    <img class="nav-logo" src="profile.jpg" alt="Aashika">
+    <span class="nav-name">Aashika Dallakoti</span>
+  </a>
+  <div class="nav-menu">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="fullstack.html">Full Stack</a>
+    <a class="nav-link" href="html.html">HTML</a>
+    <a class="nav-link" href="css.html">CSS</a>
+    <a class="nav-link" href="bootstrap.html">Bootstrap</a>
+    <a class="nav-link" href="javascript.html">JavaScript</a>
+    <a class="nav-link" href="contact.html">Contact</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <div class="reveals">
+    <span class="label">Section 3 of 5 | Aashika Dallakoti</span>
+    <h1 class="page-title"><em>CSS</em> | How I<br>Style My Web Pages</h1>
+    <p class="page-intro">CSS transforms plain HTML into polished, responsive interfaces. I have built solid skills in the <strong>Box Model</strong>, <strong>Flexbox</strong>, <strong>CSS Grid</strong>, custom properties (variables), media queries for responsiveness and keyframe animations, all of which I use in real projects.</p>
+  </div>
+
+  <div class="reveals" style="margin-bottom:44px;">
+    <h2 class="section-heading">The <em>Box Model</em></h2>
+    <p class="section-sub">Every element I build is a box. Understanding margin, border, padding and content is the foundation of all CSS layout work.</p>
+    <div class="grid-2">
+      <div class="code-block" style="padding-top:32px;">
+<span class="c">/* I always use border-box so padding
+   does not unexpectedly break widths */</span>
+<span class="k">*</span> { <span class="a">box-sizing</span>: <span class="v">border-box</span>; }
+
+<span class="k">.my-card</span> {
+  <span class="a">width</span>:   <span class="v">300px</span>;
+  <span class="a">padding</span>: <span class="v">24px</span>;   <span class="c">/* inside the border */</span>
+  <span class="a">border</span>:  <span class="v">2px solid #ccc</span>;
+  <span class="a">margin</span>:  <span class="v">16px</span>;   <span class="c">/* outside the element */</span>
+}
+      </div>
+      <div class="card card-body" style="display:flex;align-items:center;justify-content:center;">
+        <div class="bmd">
+          <div class="bmd-margin">margin
+            <div class="bmd-border">border
+              <div class="bmd-padding">padding
+                <div class="bmd-content">content</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reveals" style="margin-bottom:44px;">
+    <h2 class="section-heading">Flexbox | <em>My Go-To Layout Tool</em></h2>
+    <p class="section-sub">I use Flexbox constantly for navbars, card rows and centering content. It replaced all the float hacks I used to rely on.</p>
+    <div class="grid-2">
+      <div class="code-block" style="padding-top:32px;">
+<span class="c">/* My card row pattern */</span>
+<span class="k">.card-row</span> {
+  <span class="a">display</span>:         <span class="v">flex</span>;
+  <span class="a">gap</span>:             <span class="v">20px</span>;
+  <span class="a">flex-wrap</span>:       <span class="v">wrap</span>;
+  <span class="a">justify-content</span>: <span class="v">space-between</span>;
+  <span class="a">align-items</span>:     <span class="v">stretch</span>;
+}
+<span class="k">.card</span> { <span class="a">flex</span>: <span class="v">1</span>; <span class="a">min-width</span>: <span class="v">200px</span>; }
+<span class="k">.centred</span> {
+  <span class="a">display</span>:         <span class="v">flex</span>;
+  <span class="a">justify-content</span>: <span class="v">center</span>;
+  <span class="a">align-items</span>:     <span class="v">center</span>;
+}
+      </div>
+      <div class="card card-body">
+        <p style="font-size:.77rem;color:var(--sage3);margin-bottom:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;">Live Flexbox Demo</p>
+        <div class="flex-live">
+          <div class="fl-box" style="background:#eeddd0;">flex:1</div>
+          <div class="fl-box" style="background:#b8ccb0;">flex:1</div>
+          <div class="fl-box" style="flex:2;background:#f0e8b0;">flex:2</div>
+        </div>
+        <div class="flex-live" style="flex-direction:column;height:100px;margin-top:10px;">
+          <div class="fl-box" style="background:#f0d0c8;">column row 1</div>
+          <div class="fl-box" style="background:#b8d4e0;">column row 2</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="grid-2 reveals" style="margin-bottom:44px;">
+    <div>
+      <h2 class="section-heading" style="font-size:1.4rem;">CSS Grid</h2>
+      <p class="section-sub">For two-dimensional layouts with rows AND columns I use Grid. This portfolio uses it throughout.</p>
+      <div class="code-block" style="margin-bottom:14px;padding-top:32px;">
+<span class="k">.portfolio-grid</span> {
+  <span class="a">display</span>: <span class="v">grid</span>;
+  <span class="a">grid-template-columns</span>: <span class="v">repeat(3,1fr)</span>;
+  <span class="a">gap</span>: <span class="v">20px</span>;
+}
+<span class="k">@media (max-width:768px)</span> {
+  <span class="k">.portfolio-grid</span> {
+    <span class="a">grid-template-columns</span>: <span class="v">1fr</span>;
+  }
+}
+      </div>
+      <div class="grid-demo-css">
+        <div class="gd-cell" style="background:#eeddd0;">1</div>
+        <div class="gd-cell" style="background:#b8ccb0;">2</div>
+        <div class="gd-cell" style="background:#f0e8b0;">3</div>
+        <div class="gd-cell" style="background:#f0d0c8;grid-column:span 2;">span 2</div>
+        <div class="gd-cell" style="background:#b8d4e0;">5</div>
+      </div>
+    </div>
+    <div>
+      <h2 class="section-heading" style="font-size:1.4rem;">CSS Variables</h2>
+      <p class="section-sub">I define all colours and spacing as variables so the entire theme changes from one place.</p>
+      <div class="code-block" style="padding-top:32px;">
+<span class="c">/* Top of every stylesheet */</span>
+<span class="k">:root</span> {
+  <span class="a">--primary</span>:  <span class="v">#c88860</span>;
+  <span class="a">--bg</span>:       <span class="v">#faf5ee</span>;
+  <span class="a">--radius</span>:   <span class="v">14px</span>;
+  <span class="a">--shadow</span>:   <span class="v">0 4px 24px rgba(0,0,0,.1)</span>;
+}
+<span class="k">.button</span> {
+  <span class="a">background</span>:    <span class="v">var(--primary)</span>;
+  <span class="a">border-radius</span>: <span class="v">var(--radius)</span>;
+}
+<span class="k">@media (prefers-color-scheme:dark)</span> {
+  <span class="k">:root</span> { <span class="a">--bg</span>: <span class="v">#1e1810</span>; }
+}
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="reveals" style="margin-bottom:44px;">
+    <h2 class="section-heading">Animations | <em>Pure CSS, Zero JavaScript</em></h2>
+    <div class="grid-2">
+      <div class="code-block" style="padding-top:32px;">
+<span class="c">/* Hover transition on my cards */</span>
+<span class="k">.card</span> { <span class="a">transition</span>: <span class="v">transform .28s, box-shadow .28s</span>; }
+<span class="k">.card:hover</span> {
+  <span class="a">transform</span>:  <span class="v">translateY(-4px)</span>;
+  <span class="a">box-shadow</span>: <span class="v">0 14px 44px rgba(0,0,0,.14)</span>;
+}
+<span class="c">/* Float animation on my profile photo */</span>
+<span class="k">@keyframes</span> <span class="fn">floatY</span> {
+  <span class="v">0%,100%</span> { <span class="a">transform</span>: <span class="v">translateY(0)</span>; }
+  <span class="v">50%</span>     { <span class="a">transform</span>: <span class="v">translateY(-14px)</span>; }
+}
+<span class="k">.profile</span> {
+  <span class="a">animation</span>: <span class="fn">floatY</span> <span class="v">5s ease-in-out infinite</span>;
+}
+      </div>
+      <div class="card card-body anim-panel">
+        <p style="font-size:.77rem;color:var(--sage3);margin-bottom:14px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;">My CSS Animations</p>
+        <div class="css-anims">
+          <div class="anim-item"><div class="anim-bounce"></div><p>bounce</p></div>
+          <div class="anim-item"><div class="anim-spin"></div><p>spin</p></div>
+          <div class="anim-item"><div class="anim-pulse"></div><p>pulse</p></div>
+          <div class="anim-item"><div class="anim-slide"></div><p>slide</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="reveals">
+    <h2 class="section-heading">&#127381; Live CSS <em>Editor I Built</em></h2>
+    <p class="section-sub">Edit CSS properties and watch the box update instantly. A demonstration of how CSS properties interact in real time.</p>
+    <div class="grid-2">
+      <div class="card card-body">
+        <div class="css-editor">
+          <label>Background Color <input type="color" id="dBg" value="#eeddd0" oninput="updateDemo()"></label>
+          <label>Border Radius: <span id="dRv">14</span>px <input type="range" id="dR" min="0" max="50" value="14" oninput="updateDemo()"></label>
+          <label>Padding: <span id="dPv">20</span>px <input type="range" id="dP" min="8" max="48" value="20" oninput="updateDemo()"></label>
+          <label>Font Size: <span id="dFsv">16</span>px <input type="range" id="dFs" min="10" max="28" value="16" oninput="updateDemo()"></label>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;">
+        <div id="liveBox" style="background:#eeddd0;border-radius:14px;padding:20px;font-size:16px;font-family:var(--ff-h);color:var(--ink);border:2px solid var(--border);min-width:180px;text-align:center;transition:.3s;font-weight:700;">
+          Live CSS Preview &#10022;
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav-btns reveals">
+    <a href="html.html" class="btn btn-outline">&larr; HTML</a>
+    <a href="bootstrap.html" class="btn btn-plum">Next: Bootstrap &rarr;</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-name">Aashika Dallakoti</div>
+  <p>BSc Hons (Computer System Engineering) | Final Year Student | Graduating 2026</p>
+  <p style="margin-top:6px;">Actively applying for <strong>Junior Full Stack Developer</strong> positions &middot; <a href="/cdn-cgi/l/email-protection#a3c7c2cfcfc2c8ccd7cac2c2d0cbcac8c2e3c4cec2cacf8dc0ccce" style="color:var(--clay)"><span class="__cf_email__" data-cfemail="f397929f9f92989c879a9292809b9a9892b3949e929a9fdd909c9e">[email&#160;protected]</span></a></p>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="fullstack.html">Full Stack</a>
+    <a href="html.html">HTML</a><a href="css.html">CSS</a>
+    <a href="bootstrap.html">Bootstrap</a>
+    <script src="script.js"></script>
